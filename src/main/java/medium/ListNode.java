@@ -1,4 +1,4 @@
-package mid;
+package medium;
 
 /**
  * @author: WYL
