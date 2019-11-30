@@ -1,5 +1,7 @@
 package medium;
 
+import listNode.ListNode;
+
 /**
  * @author: WYL
  * @create: 2019-11-25 22:08
