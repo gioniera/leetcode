@@ -56,7 +56,7 @@ public class NO206 {
 
         NO206 no = new NO206();
         no.reverseList(x1);
-        no.reverseList2(x1);
+//        no.reverseList2(x1);
     }
 
 }
