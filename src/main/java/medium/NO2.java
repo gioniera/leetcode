@@ -1,6 +1,6 @@
 package medium;
 
-import listNode.ListNode;
+import vo.ListNode;
 
 /**
  * @author: WYL

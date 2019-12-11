@@ -1,6 +1,6 @@
 package eazy;
 
-import listNode.ListNode;
+import vo.ListNode;
 
 /**
  * @author: WYL

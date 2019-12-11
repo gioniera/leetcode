@@ -1,5 +1,5 @@
 package eazy;
-import listNode.ListNode;
+import vo.ListNode;
 
 import java.util.HashSet;
 
