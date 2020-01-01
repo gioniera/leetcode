@@ -2,12 +2,6 @@ package medium;
 
 import vo.TreeNode;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * @author: WYL
@@ -40,5 +34,44 @@ public class NO230 {
             return 0;
         }
         return getLeafNum(root.left)+getLeafNum(root.right)+1;
+    }
+
+    /**
+     * 中序遍历
+     * @param root
+     * @param k
+     * @return
+     */
+    int curk;
+    public int kthSmallest2(TreeNode root, int k) {
+        root = recursionMiddleorderTraversal(root,k);
+        return root.val;
+    }
+    public TreeNode recursionMiddleorderTraversal(TreeNode node, int k){
+        TreeNode ret = null;
+        if (node!=null){
+            ret = recursionMiddleorderTraversal(node.left, k);
+            if (ret != null) {
+                return ret;
+            }
+            curk++;
+            if (curk==k){
+                return node;
+            }
+            ret = recursionMiddleorderTraversal(node.right,k);
+        }
+        return ret;
+    }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(5);
+        root.left = new TreeNode(3);
+        root.right = new TreeNode(6);
+        root.left.left = new TreeNode(2);
+        root.left.right = new TreeNode(4);
+        root.left.left.left = new TreeNode(1);
+
+        NO230 no = new NO230();
+        System.out.println(no.kthSmallest2(root,6));
     }
 }

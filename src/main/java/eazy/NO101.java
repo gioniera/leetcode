@@ -3,7 +3,6 @@ package eazy;
 import vo.TreeNode;
 
 import java.util.LinkedList;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * @author: WYL
